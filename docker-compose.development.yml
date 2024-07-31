@@ -1,0 +1,35 @@
+version: '3.8'
+
+networks:
+  devhelton-network:
+    driver: bridge
+
+services:
+  app:
+    container_name: devhelton-java
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - JAVA_OPTS=-Xmx512m
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/devhelton
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    depends_on:
+      - db
+    networks:
+      - devhelton-network
+
+  db:
+    container_name: devhelton-postgres
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=devhelton
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "35432:5432"
+    networks:
+      - devhelton-network
