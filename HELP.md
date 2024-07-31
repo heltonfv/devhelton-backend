@@ -1,26 +1,11 @@
-# Getting Started
+# Backend of devhelton.com
 
-### Reference Documentation
-For further reference, please consider the following sections:
+Este projeto está usando Spring Boot 3.3.2 com Java 17.
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.2/gradle-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.3.2/gradle-plugin/packaging-oci-image.html)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.3.2/reference/htmlsingle/index.html#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.3.2/reference/htmlsingle/index.html#data.sql.jpa-and-spring-data)
-* [Validation](https://docs.spring.io/spring-boot/docs/3.3.2/reference/htmlsingle/index.html#io.validation)
+1. Antes de iniciar o projeto, execute os teste para confirmar se tudo está certo. Execute ./gradlew test
 
-### Guides
-The following guides illustrate how to use some features concretely:
+2. Se os testes executarem com sucesso, execute ./gradlew build para buildar o projeto.
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Validation](https://spring.io/guides/gs/validating-form-input/)
+3. Após, na pasta /build/libs execute java -jar <nome-do-projeto> para iniciar.
 
-### Additional Links
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
+4. Se tudo estiver certo, a aplicação estará disponível em http://localhost:8080
