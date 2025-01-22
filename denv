@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CONTAINER_POSTGRES=devhelton-postgres
+CONTAINER_NGINX=devhelton-nginx
+CONTAINER_JASPER=devhelton-jasper
+CONTAINER_REDIS=devhelton-redis
+CONTAINER_ECHO=devhelton-echo
+CONTAINER_PHP=devhelton-php
+PHP_VERSAO=8.3

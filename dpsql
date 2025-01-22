@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. denv
+
+PARAMS=$@
+
+docker exec -ti $CONTAINER_POSTGRES psql -Upostgres $@
